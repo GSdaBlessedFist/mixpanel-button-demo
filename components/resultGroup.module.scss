@@ -1,0 +1,19 @@
+@import "../app/styles/mixins/";
+
+
+.resultGroup{
+    @apply m-4 my-2 flex items-center w-48 h-10;
+    //border: 5px red solid;
+}
+//NumberDisplay child component
+
+.numberDisplay{
+    @apply  text-4xl  text-primary-dark;
+    //@include b;
+}
+
+//QueryDisplay child component
+.queryDisplay{
+    @apply  flex justify-center leading-4 text-left text-primary-light text-lg w-full px-2;
+    //@include b;
+}

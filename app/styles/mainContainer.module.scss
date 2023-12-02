@@ -1,13 +1,21 @@
 @import './mixins.scss';
+@import "./fonts/fonts.scss";
 
 .mainContainer{
-  @apply w-full min-w-[480px] h-screen lg:w-2/3;
+  @apply w-full min-w-[480px] h-screen lg:w-2/3 ;
 
 }
-
-
-
-.svgButton {
-  @apply relative scale-50 translate-y-10;
+.dashboardContainer{
+  @apply flex justify-evenly items-center flex-wrap mx-auto absolute top-24  w-full h-48;
+  @include digi;
+  @apply text-2xl text-orange-700;
+  //@include b;
+}
+.svgButtonContainer {
+  @apply flex justify-center absolute w-full bottom-10 ;
   @include b(2px);
+}
+.svgButton{
+  @apply w-[360px];
+  //@include b;
 }
