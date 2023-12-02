@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'DS-DIGI';
+    src: url('../fonts/DS-DIGI.TTF') format('truetype'); 
+  }
+
+  @mixin digi{
+    font-family: 'DS-DIGI';
+  }
+  .digi{
+    @include digi;
+  }

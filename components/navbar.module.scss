@@ -1,0 +1,29 @@
+@import '../app/styles/mixins.scss';
+
+.navbar{
+    @apply grid mx-auto min-w-[480px] lg:w-2/3 bg-primary py-3 pl-5 lg:pl-0;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "title menu";
+    @media ( min-width: 1024px){
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: "title title menu";
+    }
+    font-family:  Helvetica, sans-serif;
+    //@include b;
+}
+.title{
+    grid-area: title;
+    @apply flex justify-start lg:justify-center items-center text-4xl  lg:text-6xl text-white;
+    // @include b(2px);
+}
+.navMenu{
+    grid-area: menu;
+    @apply relative left-6 lg:left-0 w-2/3 mx-auto flex justify-evenly lg:justify-around items-center text-xl text-white;
+    font-family:  Helvetica, sans-serif;
+    @include b(2px);
+}
+.menuItem{
+    @apply w-1/2  bg-red-200 active:text-primary-dark;
+    font-family:  Helvetica, sans-serif;
+    //@include b(2px); 
+}

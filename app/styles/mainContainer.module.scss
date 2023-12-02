@@ -1,0 +1,13 @@
+@import './mixins.scss';
+
+.mainContainer{
+  @apply w-full min-w-[480px] h-screen lg:w-2/3;
+
+}
+
+
+
+.svgButton {
+  @apply relative scale-50 translate-y-10;
+  @include b(2px);
+}

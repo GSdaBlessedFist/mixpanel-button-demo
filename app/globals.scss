@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './styles/fonts/fonts.scss';
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #112;
+}

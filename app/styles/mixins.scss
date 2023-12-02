@@ -1,0 +1,8 @@
+@mixin b($w:5px){
+    border: $w orange dashed;
+}
+@mixin centered{
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+}
