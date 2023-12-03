@@ -2,17 +2,18 @@
 @import "./fonts/fonts.scss";
 
 .mainContainer{
-  @apply w-full min-w-[480px] h-screen lg:w-2/3 ;
+  @apply w-full min-w-[480px] h-screen lg:w-2/3 mx-auto bg-primary-superDark;
 
 }
 .dashboardContainer{
-  @apply flex justify-evenly items-center flex-wrap mx-auto absolute top-24  w-full h-48;
+  @apply flex justify-evenly items-center flex-wrap mx-auto absolute top-32 w-full lg:w-2/3 py-2 border-primary-superDark border-b-8 rounded-xl bg-primary-dark;
   @include digi;
-  @apply text-2xl text-orange-700;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   //@include b;
 }
 .svgButtonContainer {
-  @apply flex justify-center absolute w-full bottom-10 ;
+  @apply flex justify-center absolute w-full bottom-10 lg:w-2/3;
   @include b(2px);
 }
 .svgButton{

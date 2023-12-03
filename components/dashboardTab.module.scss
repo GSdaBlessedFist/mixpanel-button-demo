@@ -1,0 +1,7 @@
+@import "../app/styles/mixins/";
+
+.dashboardTab{
+    @apply flex relative top-2 justify-center items-center w-full  bg-primary-light text-white text-sm py-1 opacity-50;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+}

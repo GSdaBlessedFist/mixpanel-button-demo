@@ -12,7 +12,8 @@ const config: Config = {
         "primary": {
           'DEFAULT': "#463dbb",
           'light': "#8984D7",
-          'dark': "#3F37A9"
+          'dark': "#3F37A9",
+          'superDark': "#070613"
         }
       }
     },

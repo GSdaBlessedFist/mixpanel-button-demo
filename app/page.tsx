@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import styles from "./styles/mainContainer.module.scss";
 import SVGButton from "../components/SVGButton";
 import ResultGroup from "../components/ResultGroup";
+import DashboardTab from "../components/DashboardTab";
 import { useEffect, useRef, useState } from 'react';
 
 type HomeProps = {};
@@ -48,8 +49,9 @@ export default function Home(props: HomeProps) {
              </div>
               
           ))}
-          {/* <ResultGroup finding={findings[0]}/> */}
+          <DashboardTab/>
         </div>
+        
       </div>
 
 
