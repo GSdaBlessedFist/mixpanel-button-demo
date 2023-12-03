@@ -4,7 +4,7 @@ import styles from "./resultGroup.module.scss";
 
 function ResultGroup({ finding }) {
     useEffect(() => {
-        console.log(finding.query)
+        
     }, [])
 
     return (<>

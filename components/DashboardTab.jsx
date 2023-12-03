@@ -3,7 +3,10 @@ import styles from "./dashboardTab.module.scss";
 function DashboardTab() {
     return (
         <div className={styles.dashboardTab}>
-            <code> check out the code</code>
+            <div className="font-mono"> check out the code</div>
+            <div className={styles.codeblock}>
+                
+            </div>
         </div>
     );
 }

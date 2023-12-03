@@ -6,6 +6,7 @@ import SVGButton from "../components/SVGButton";
 import ResultGroup from "../components/ResultGroup";
 import DashboardTab from "../components/DashboardTab";
 import { useEffect, useRef, useState } from 'react';
+import mixpanel from "mixpanel-browser";
 
 type HomeProps = {};
 
@@ -32,8 +33,18 @@ export default function Home(props: HomeProps) {
       result: 50
     }
   ]
-  useEffect(() => {
-  }, []);
+  useEffect(()=>{
+    mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_ID || "",
+    {
+        debug: true, 
+        track_pageview: true, 
+        persistence: 'localStorage',
+        ignore_dnt: true,
+    }
+    )
+    mixpanel.identify('Jason Z')
+    mixpanel.track("page_view")
+},[])
 
   return (
     <>
