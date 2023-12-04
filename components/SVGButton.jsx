@@ -1,11 +1,16 @@
-import * as React from "react"
+import {useEffect} from "react"
 import styles from "../app/styles/mainContainer.module.scss";
+import MixpanelTracking from "../service/mixpanel";
 
 
-const SVGButton = () => (
-    // <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" width={480}
-    //     height={600} viewBox="0 0 127 158.7" {...props} >
-    <svg className={styles.svgButton } xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" 
+export default function SVGButton(){
+
+    useEffect(() => {
+        
+      }, [])
+
+    return (<>
+        <svg className={styles.svgButton } xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" 
          viewBox="0 0 127 158.7"  width="100%">
         <defs>
             <linearGradient id="a">
@@ -62,7 +67,7 @@ const SVGButton = () => (
                     opacity: 0.0414, fill: "none", fillOpacity: 1, fillRule: "evenodd", stroke: "#fff", strokeWidth:
                         1.2967, strokeDasharray: "none", strokeOpacity: 1,
                 }} />
-            <path
+            <path onClick={()=>MixpanelTracking.getInstance().buttonPushed()}
                 d="m114.8 304.7-12.5.8-10.71 3.1-5.85 2.3-1.27 3.3-.1 7.9-7.09 1.2-8.1 4.1-3.58 3.2-.46 4.9 3.42 5.2 6.71 2.8 10.61 3.8 10.64 2.7 11.98.7 12.2-1.5 13.2-1.2 12-2.1 10-4.4 5.4-4.9 1.7-6.3-3.3-4.8-5.6-3.4-6.7-2.1h-2.2l-1.1-7.1-4.4-5.3-7.9-2.7-10.1-1.3z"
                 style={{
                     mixBlendMode: "normal", fill: "#8984d7", fillOpacity: 1, stroke: "#000", strokeWidth: ".2646px",
@@ -204,5 +209,5 @@ const SVGButton = () => (
                 }} transform="translate(-23.68 -46.61) scale(2.156)" />
         </g>
     </svg>
-)
-export default SVGButton
+    </>)
+}

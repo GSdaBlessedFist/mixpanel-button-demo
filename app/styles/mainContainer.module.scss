@@ -6,14 +6,14 @@
 
 }
 .dashboardContainer{
-  @apply flex justify-evenly items-center flex-wrap mx-auto absolute top-32 w-full lg:w-2/3 py-2 border-primary-superDark border-b-8 rounded-xl bg-primary-dark;
+  @apply hidden justify-evenly items-center flex-wrap mx-auto absolute top-32 w-full lg:w-2/3 py-2 border-primary-superDark border-b-8 rounded-xl bg-primary-dark;
   @include digi;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   //@include b;
 }
 .svgButtonContainer {
-  @apply flex justify-center absolute w-full bottom-10 lg:w-2/3;
+  @apply flex justify-center absolute w-full bottom-32 lg:w-2/3;
   @include b(2px);
 }
 .svgButton{
