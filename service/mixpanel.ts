@@ -20,7 +20,7 @@ export default class MixpanelTracking {
         mixpanel.init(mixpanelToken || "",
             {
                 debug: true,
-                persistence: 'localStorage',
+                track_pageview: true,
                 ignore_dnt: true,
             }
         )
@@ -34,6 +34,9 @@ export default class MixpanelTracking {
     public buttonPushed() {
         this.track("buttonPushed")
 
+    }
+    public impatientClickery(){
+        this.track("impatientClickery")
     }
     
 }
