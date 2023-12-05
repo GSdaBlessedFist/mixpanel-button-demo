@@ -2,7 +2,7 @@
 @import "./fonts/fonts.scss";
 
 .mainContainer{
-  @apply w-full min-w-[480px] h-screen lg:w-2/3 mx-auto bg-primary-superDark;
+  @apply  flex justify-center w-full min-w-[480px] h-screen lg:w-2/3 mx-auto bg-primary-superDark;
 
 }
 .svgButtonContainer {
