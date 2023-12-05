@@ -1,7 +1,7 @@
 @import '../app/styles/mixins.scss';
 
 .navbar{
-    @apply grid mx-auto min-w-[480px] lg:w-2/3 bg-primary py-3 pl-5 lg:pl-0;
+    @apply grid w-full mx-auto min-w-[480px] lg:w-2/3 bg-primary py-3 pl-5 lg:pl-0;
         grid-template-columns: 40% 60%;
         grid-template-areas: "title menu";
     @media ( min-width: 1024px){
