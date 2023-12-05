@@ -1,0 +1,6 @@
+@import "../app/styles/mixins.scss";
+@import "../app/styles/fonts/fonts.scss";
+
+.footer{
+    @apply relative  p-4 mx-auto min-w-[480px] lg:w-2/3 bg-primary py-3 pl-5 lg:pl-0;
+}

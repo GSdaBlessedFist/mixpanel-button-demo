@@ -2,14 +2,17 @@
 @import "./fonts/fonts.scss";
 
 .mainContainer{
-  @apply w-full min-w-[480px] h-screen lg:w-2/3 mx-auto bg-primary-superDark;
+  @apply w-full min-w-[480px] h-auto  flex  relative justify-center items-start mx-auto bg-primary-superDark;
 
 }
 .svgButtonContainer {
-  @apply flex justify-center absolute w-full bottom-32 lg:w-2/3;
+  @apply  flex justify-center absolute w-full bottom-48 lg:w-2/3;
   @include b(2px);
 }
 .svgButton{
   @apply w-[360px];
   //@include b;
+}
+.dashboardLink{
+  @apply relative top-48 text-primary-light;
 }
