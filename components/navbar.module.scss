@@ -18,9 +18,9 @@
 }
 .navMenu{
     grid-area: menu;
-    @apply relative left-6 lg:left-0 w-2/3 mx-auto flex justify-evenly lg:justify-around items-center text-xl text-white;
+    @apply relative left-6 lg:left-0 w-2/3 mx-auto flex justify-end lg:justify-around items-center text-xl text-white;
     font-family:  Helvetica, sans-serif;
-    @include b(2px);
+    
 }
 .menuItem{
     @apply w-1/2  bg-red-200 active:text-primary-dark;

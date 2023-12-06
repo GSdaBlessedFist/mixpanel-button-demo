@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import gsap from "gsap";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./styles/mainContainer.module.scss";
@@ -16,27 +17,52 @@ export default function Home(props: HomeProps) {
   const [hasTrackedPageView, setHasTrackedPageView] = useState(false);
   const [mixpanelData, setMixpanelData] = useState(null);
 
-  
+  const [buttonPressed,setButtonPressed] = useState(false);
+  const [buttonPressCount,setButtonPressCount] = useState(0);
 
+  const dashboardLink = useRef();
+
+  const updateButtonPressed = (isPressed:boolean) => {
+    setButtonPressed(isPressed);
+    setButtonPressCount(prev=> prev + 1)
+  };
+  const displayLink = () => {
+    gsap.fromTo(dashboardLink.current,{
+      y:"+=70",
+      scale: 0.55,
+      opacity: 0,
+      duration: 2
+    },{
+      y:"+-=50",
+      scale: 1,
+      opacity: 1,
+      duration: 2,
+      ease: "power2.in"
+    })
+  }
   useEffect(() => {
     if (!hasTrackedPageView) {
       MixpanelTracking.getInstance().pageViewed();
       setHasTrackedPageView(true);
     }
-
   }, [hasTrackedPageView]);
 
+  useEffect(()=>{
+      if(buttonPressCount !== 0){
+        displayLink();
+      }
+  },[buttonPressCount])
   return (
     <>
       <div className="sm:w-full flex flex-col h-screen">
       <Navbar />
       <div className={styles.mainContainer}>
-        <Link href="/" className="relative h-12 p-2 top-32 text-primary border-2 border-primary">
-          Check out the dashboard
+        <Link ref={dashboardLink} href="https://mixpanel.com/p/91i4pT5DuBCG3a22cwXfjm" target="_blank" className="opacity-0 relative h-12 p-2 top-32 text-primary border-2 border-primary">
+        Check out the dashboard
         </Link>
         
         <div className={styles.svgButtonContainer}>
-          <SVGButton />
+          <SVGButton buttonPressed={buttonPressed} updateButtonPressed={updateButtonPressed} />
         </div>
         
 

@@ -1,0 +1,46 @@
+
+
+.svgButton{
+    @apply w-[360px];
+    //@include b;
+  }
+.buttonRingInside{
+    @apply fill-primary-superDark;
+}
+.buttonRingOutside{
+    @apply fill-primary;
+}
+.buttonBody{
+    @apply fill-primary;
+}
+.buttonTop{
+    @apply fill-primary-light;
+}
+.buttonEdge{
+    @apply fill-primary;
+}
+.lightBorder{
+    @apply fill-primary;
+}
+.light{
+    @apply fill-gray-900;
+}
+.redLight{
+    fill: url("#red_light");
+    animation: redBlink 2s steps(2) 3;
+}
+.greenLight{
+    fill: url("#green_light");
+}
+.warning{
+    @apply fill-orange-900 opacity-50;
+}
+
+@keyframes redBlink{
+    0%,100%{
+        fill: url("#red_light");
+    }
+    50%{
+        fill: #113;
+    }
+}
