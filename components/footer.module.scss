@@ -2,5 +2,5 @@
 @import "../app/styles/fonts/fonts.scss";
 
 .footer{
-    @apply w-full flex items-center justify-between relative mx-auto min-w-[480px] lg:w-2/3 bg-primary p-6 text-white text-right;
+    @apply w-full  flex items-center justify-around relative mx-auto min-w-[480px] lg:w-2/3 bg-primary p-6 text-white text-right;
 }

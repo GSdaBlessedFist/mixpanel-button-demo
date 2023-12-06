@@ -8,7 +8,7 @@ function Navbar() {
             <div className={styles.navMenu}>
                 
                 <div className="menuItem">
-                    <Link href="/resume">
+                    <Link href="/resume" target="_blank">
                         resum&eacute;
                     </Link>
                 </div>
