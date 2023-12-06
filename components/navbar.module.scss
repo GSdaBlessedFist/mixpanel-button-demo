@@ -13,7 +13,7 @@
 }
 .title{
     grid-area: title;
-    @apply flex justify-start lg:justify-center items-center text-4xl  lg:text-6xl text-white;
+    @apply flex justify-start  lg:ml-24 items-center text-4xl  lg:text-6xl text-white;
     // @include b(2px);
 }
 .navMenu{
@@ -23,7 +23,7 @@
     
 }
 .menuItem{
-    @apply w-1/2  bg-red-200 active:text-primary-dark;
+    @apply flex flex-col items-end active:text-primary-dark leading-6;
     font-family:  Helvetica, sans-serif;
     //@include b(2px); 
 }
