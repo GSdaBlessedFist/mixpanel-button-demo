@@ -9,11 +9,11 @@ import { useEffect, useRef, useState } from 'react';
 import MixpanelTracking from '@/service/mixpanel';
 import Link from 'next/link';
 
-type HomeProps = {};
 
 
 
-export default function Home(props: HomeProps) {
+
+export default function Home(props) {
   const [hasTrackedPageView, setHasTrackedPageView] = useState(false);
   const [mixpanelData, setMixpanelData] = useState(null);
 
@@ -22,7 +22,7 @@ export default function Home(props: HomeProps) {
 
   const dashboardLink = useRef();
 
-  const updateButtonPressed = (isPressed:boolean) => {
+  const updateButtonPressed = (isPressed) => {
     setButtonPressed(isPressed);
     setButtonPressCount(prev=> prev + 1)
   };
