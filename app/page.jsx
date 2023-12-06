@@ -59,7 +59,7 @@ export default function Home(props) {
     if (buttonPressCount !== 0) {
       displayLink();
     }
-  }, [buttonPressCount])
+  }, [buttonPressCount,displayLink])
   return (
     <>
       <div className="sm:w-full flex flex-col h-screen">

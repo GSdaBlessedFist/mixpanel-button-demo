@@ -8,7 +8,7 @@ function Navbar() {
             <div className={styles.navMenu}>
                 
                 <div className={styles.menuItem}>
-                    <span className="hidden lg:block">Jason Zamora's</span>
+                    <span className="hidden lg:block">Jason Zamora&apos;s</span>
                     <Link href="/resume" target="_blank" className=" text-primary-light hover:text-white">
                         resum&eacute;
                     </Link>
