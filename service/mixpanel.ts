@@ -38,5 +38,7 @@ export default class MixpanelTracking {
     public impatientClickery(){
         this.track("impatientClickery")
     }
-    
+    public buttonPressedAfterGreenLight(){
+        this.track("buttonPressedAfterGreenLight")
+    }
 }
